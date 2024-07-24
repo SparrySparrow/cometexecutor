@@ -1,0 +1,238 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 19 | Scripts: 4 | Modules: 0
+local G2L = {};
+
+-- StarterGui.comet_v1
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["DisplayOrder"] = 999999999;
+G2L["1"]["Name"] = [[comet_v1]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.comet_v1.MainFrame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["2"]["Size"] = UDim2.new(0, 564, 0, 289);
+G2L["2"]["Position"] = UDim2.new(0.24025, 0, 0.37351, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[MainFrame]];
+
+-- StarterGui.comet_v1.MainFrame.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.comet_v1.MainFrame.cometLogo
+G2L["4"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["Image"] = [[rbxassetid://13051101695]];
+G2L["4"]["Size"] = UDim2.new(0, 67, 0, 63);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["BackgroundTransparency"] = 1;
+G2L["4"]["Name"] = [[cometLogo]];
+G2L["4"]["Position"] = UDim2.new(-0.01418, 0, -0.03114, 0);
+
+-- StarterGui.comet_v1.MainFrame.cometLogo.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+
+
+-- StarterGui.comet_v1.MainFrame.Monaco
+G2L["6"] = Instance.new("TextBox", G2L["2"]);
+G2L["6"]["CursorPosition"] = -1;
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["TextSize"] = 15;
+G2L["6"]["Name"] = [[Monaco]];
+G2L["6"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6"]["RichText"] = true;
+G2L["6"]["MultiLine"] = true;
+G2L["6"]["ClearTextOnFocus"] = false;
+G2L["6"]["Size"] = UDim2.new(0, 564, 0, 185);
+G2L["6"]["Position"] = UDim2.new(0, 0, 0.16609, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[print("hello world")]];
+
+-- StarterGui.comet_v1.MainFrame.Monaco.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+
+
+-- StarterGui.comet_v1.MainFrame.executeBtn
+G2L["8"] = Instance.new("TextButton", G2L["2"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextSize"] = 18;
+G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["Size"] = UDim2.new(0, 132, 0, 43);
+G2L["8"]["Name"] = [[executeBtn]];
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[EXECUTE]];
+G2L["8"]["Position"] = UDim2.new(0.01418, 0, 0.83045, 0);
+
+-- StarterGui.comet_v1.MainFrame.executeBtn.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["8"]);
+
+
+-- StarterGui.comet_v1.MainFrame.executeBtn.LocalScript
+G2L["a"] = Instance.new("LocalScript", G2L["8"]);
+
+
+-- StarterGui.comet_v1.MainFrame.clearBtn
+G2L["b"] = Instance.new("TextButton", G2L["2"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 18;
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["Size"] = UDim2.new(0, 132, 0, 43);
+G2L["b"]["Name"] = [[clearBtn]];
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[CLEAR]];
+G2L["b"]["Position"] = UDim2.new(0.27128, 0, 0.83045, 0);
+
+-- StarterGui.comet_v1.MainFrame.clearBtn.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["b"]);
+
+
+-- StarterGui.comet_v1.MainFrame.clearBtn.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["b"]);
+
+
+-- StarterGui.comet_v1.MainFrame.configBtn
+G2L["e"] = Instance.new("TextButton", G2L["2"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 18;
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["Size"] = UDim2.new(0, 132, 0, 43);
+G2L["e"]["Name"] = [[configBtn]];
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[OPTIONS]];
+G2L["e"]["Position"] = UDim2.new(0.73404, 0, 0.83045, 0);
+
+-- StarterGui.comet_v1.MainFrame.configBtn.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+
+
+-- StarterGui.comet_v1.MainFrame.closeBtn
+G2L["10"] = Instance.new("TextButton", G2L["2"]);
+G2L["10"]["TextWrapped"] = true;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextSize"] = 45;
+G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["Size"] = UDim2.new(0, 31, 0, 28);
+G2L["10"]["Name"] = [[closeBtn]];
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[×]];
+G2L["10"]["Position"] = UDim2.new(0.92908, 0, 0.03114, 0);
+
+-- StarterGui.comet_v1.MainFrame.closeBtn.UICorner
+G2L["11"] = Instance.new("UICorner", G2L["10"]);
+
+
+-- StarterGui.comet_v1.MainFrame.closeBtn.LocalScript
+G2L["12"] = Instance.new("LocalScript", G2L["10"]);
+
+
+-- StarterGui.comet_v1.MainFrame.Dragify
+G2L["13"] = Instance.new("LocalScript", G2L["2"]);
+G2L["13"]["Name"] = [[Dragify]];
+
+-- StarterGui.comet_v1.MainFrame.executeBtn.LocalScript
+local function C_a()
+local script = G2L["a"];
+	script.Parent.MouseButton1Click:Connect(function()
+		local script1 = script.Parent.Parent.Monaco.Text
+	
+		local fn = loadstring(script1)
+		if fn then
+			fn()
+		else
+			warn("Failed to compile the script")
+		end
+	end)
+end;
+task.spawn(C_a);
+-- StarterGui.comet_v1.MainFrame.clearBtn.LocalScript
+local function C_d()
+local script = G2L["d"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Monaco.Text = ""
+	end)
+end;
+task.spawn(C_d);
+-- StarterGui.comet_v1.MainFrame.closeBtn.LocalScript
+local function C_12()
+local script = G2L["12"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_12);
+-- StarterGui.comet_v1.MainFrame.Dragify
+local function C_13()
+local script = G2L["13"];
+	local UserInputService = game:GetService("UserInputService")
+	
+	local dragToggle
+	local dragInput
+	local dragSpeed
+	local dragStart
+	local dragPos
+	local startPos
+	
+	function dragify(Frame)
+	    dragToggle = nil
+	    dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    dragPos = nil
+	    local function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UserInputService:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end;
+task.spawn(C_13);
+
+return G2L["1"], require;
